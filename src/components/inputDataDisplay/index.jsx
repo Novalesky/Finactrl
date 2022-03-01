@@ -8,7 +8,7 @@ export default function InputDataDisplay(){
     function handleChange({target}){
         const {id, value} = target
         setNewEntry({...newEntry, [id]:value })
-        console.log(newEntry.value)
+        console.log(newEntry)
     }
     
     function handleClick(){
@@ -18,7 +18,7 @@ export default function InputDataDisplay(){
             return
         }else{
             setNewEntry(newEntry.id = ++idGeneretor)
-            newEntry.value <0 ?dispatch({type:'spending', newIncoming: newEntry}) : dispatch({type:'incoming', newspending: newEntry})
+            newEntry.value <0 ?dispatch({type:'spending', newSpending: newEntry}) : dispatch({type:'incoming', newIncoming: newEntry})
             setNewEntry('')
 
         }

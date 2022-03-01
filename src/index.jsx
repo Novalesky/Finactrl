@@ -4,7 +4,7 @@ import DisplayValue from './components/displayValue/index'
 import DataProvider from './context/data_provider/index'
 import InputDataDisplay from './components/inputDataDisplay'
 import IncomingDisplayFunction from './components/incomingDisplayFunction/index'
-
+import SpendingDisplayFunction from './components/spendingDisplayFunction/index'
 
 import './index.css'
 
@@ -18,7 +18,9 @@ function Index (){
                         <DisplayValue>
                             <IncomingDisplayFunction></IncomingDisplayFunction>
                         </DisplayValue>
-                        {/* <DisplayValue></DisplayValue> */}
+                        <DisplayValue>
+                            <SpendingDisplayFunction></SpendingDisplayFunction>
+                        </DisplayValue>
                         {/* <DisplayValue></DisplayValue> */}
                 </div>
                 <div className='transactionsContainer'>
