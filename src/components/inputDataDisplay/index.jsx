@@ -1,5 +1,6 @@
 import React, {useState}from 'react'
 import {useData} from '../../context/data_provider/index'
+import './index.css'
 let idGeneretor = 0
 export default function InputDataDisplay(){
     const {dispatch} = useData()
@@ -25,9 +26,12 @@ export default function InputDataDisplay(){
     }
     
     return (
-        <div>
-            <input type="number" onChange={handleChange}  id='value' value = {newEntry.value || ''}></input>
+        <div className="inputContainer">
+            <div className="inputFieldHandler">
+            
+            <input onChange={handleChange} type="number"  id='value' value = {newEntry.value || ''}></input>
             <input onChange={handleChange} id='description' value = {newEntry.description || ''}></input>
+            </div>
             
             <button onClick={handleClick}>Adicionar</button>
         </div>    
