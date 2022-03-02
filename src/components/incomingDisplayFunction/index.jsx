@@ -4,8 +4,7 @@ import {useData} from '../../context/data_provider/index'
 export default function IncomingDisplayFunction(){
 
     const {state} = useData()
-    console.log(`${state.incomings.value} esse aqui é o state`)
-
+    
     const valueHandle = state.incomings
     .map((ele)=>{
 
@@ -17,8 +16,8 @@ export default function IncomingDisplayFunction(){
     },0)
     
     return(
-        <>
+        <div className="incomingContainer">
             <p>{valueHandle.toFixed(2)}</p>
-        </>
+        </div>
     )
 }

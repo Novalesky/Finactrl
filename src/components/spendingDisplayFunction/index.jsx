@@ -17,8 +17,8 @@ export default function SpendingDisplayFunction(){
     },0)
     
     return(
-        <>
+        <div className="spendingContainer">
             <p>{valueHandle.toFixed(2)}</p>
-        </>
+        </div>
     )
 }

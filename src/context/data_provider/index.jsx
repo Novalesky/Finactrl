@@ -21,7 +21,6 @@ export function reducer(state, action){
 
 export default function DataProvider ({children}){
     const [state, dispatch] = useReducer(reducer, initialState)
-    console.log(state)
     return(
         <dataContext.Provider value={{state, dispatch}}>
             {children}

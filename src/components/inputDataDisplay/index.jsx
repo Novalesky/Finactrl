@@ -8,7 +8,6 @@ export default function InputDataDisplay(){
     function handleChange({target}){
         const {id, value} = target
         setNewEntry({...newEntry, [id]:value })
-        console.log(newEntry)
     }
     
     function handleClick(){
