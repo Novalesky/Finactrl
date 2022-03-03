@@ -17,7 +17,8 @@ export default function IncomingDisplayFunction(){
     
     return(
         <div className="incomingContainer">
-            <p>{valueHandle.toFixed(2)}</p>
+            <p>Entradas</p>
+            <p>R${valueHandle.toFixed(2)}</p>
         </div>
     )
 }

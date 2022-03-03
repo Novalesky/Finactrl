@@ -12,6 +12,7 @@ export default function RevenueDisplayFunction(){
     
     
     return(<div className="revenueContainer">
-        {revenueValue.toFixed(2)}
+        <p>Receita</p>
+        <p>R${revenueValue.toFixed(2)}</p>
     </div>)
 }

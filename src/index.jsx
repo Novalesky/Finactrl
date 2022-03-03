@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import ReactDOM from 'react-dom'
 import DisplayValue from './components/displayValue/index'
 import DataProvider from './context/data_provider/index'
-import InputDataDisplay from './components/inputDataDisplay'
 import IncomingDisplayFunction from './components/incomingDisplayFunction/index'
 import SpendingDisplayFunction from './components/spendingDisplayFunction/index'
 import RevenueDisplayFunction from './components/revenueDisplayFunction/index'
@@ -15,7 +14,7 @@ import './index.css'
 function Index (){
 
     const [modalVisible, setModalVisible]=useState(false)
-    const modalHandle = modalVisible && <InputModal viewSwitcher={{setModalVisible}} viewStatus={modalVisible}/> 
+    const modalHandle = modalVisible && <InputModal viewSwitcher={{setModalVisible}} /> 
 
     function visibleHandle(){
         modalHandle? setModalVisible(false) : setModalVisible(true)
@@ -39,7 +38,7 @@ function Index (){
                         </DisplayValue>
                         
                         <DisplayValue>
-                            <RevenueDisplayFunction>
+                            <RevenueDisplayFunction >
 
                             </RevenueDisplayFunction>
                         </DisplayValue>
