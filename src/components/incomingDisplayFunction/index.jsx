@@ -14,13 +14,9 @@ export default function IncomingDisplayFunction(){
     }).reduce((acc, add)=>{
 
         return acc + add
-    },0)
+    },0).toFixed(2)
     
     
 
-    return(
-        <div className="incomingContainer">
-            
-        </div>
-    )
+    return(<DisplayValue valueToDisplay={valueHandle} displayId={'Entrada'}/>)
 }

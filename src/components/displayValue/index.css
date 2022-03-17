@@ -1,52 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
-.displayValueContainer{
-    min-width:20%;
-    height:150px;
-    margin:60px 20px 0px 20px;
-    border-radius:5px;
-    background-color: hsl(0, 0%, 100%);
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-family: 'Shippori Antique B1', sans-ser;
-}
-.displayValueContainer:nth-child(3){
-    background-color:rgb(124, 230, 18);
-}
-.arrow{
-    align-self: flex-start;
-    margin-top:40px;
-    margin-left: 10px;
-    width:30px;
-    height:30px;
-}
-
-.displayValueContainer:nth-child(1) .arrow svg{
-    stroke :rgb(124, 230, 18);
-    transform: rotate(180deg);
-}
-.displayValueContainer:nth-child(2) .arrow svg{
-    stroke :rgb(255, 124, 124);
-}
-.revenueContainer{
+.defaultStyle, .negative{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    color:aliceblue;
+    width:25%;
+    height:100%;
+    
+    background-color: whitesmoke;
+    border-radius:5px;
+    
+    font-family:'Shippori Antique B1', sans-serif;
+    font-size: larger;
+    transition:background-color 1s;
+
 }
-.spendingContainer{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
+.defaultStyle:nth-child(2) svg{
+    transform: rotate(180deg);
+    stroke:rgb(199, 59, 59);
 }
-.incomingContainer{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
+.defaultStyle:nth-child(3){
+    background-color: rgb(132, 241, 132);
+}
+.negative{
+    background-color: rgb(252, 161, 161);
+}
+.negative svg{
+    transform:rotate(180deg);
+    stroke:rgb(199, 59, 59);
+}
+svg{
+    width:20px;
+    height:20px;
+    transition: transform 1s;
+    stroke:rgb(36, 153, 36);
 }

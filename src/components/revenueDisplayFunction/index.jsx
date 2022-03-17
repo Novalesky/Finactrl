@@ -8,11 +8,8 @@ export default function RevenueDisplayFunction(){
     const parsedIncomings = state.incomings.map((ele)=> parseFloat(ele.value) ).reduce((add, acc)=>{return add + acc},0)
     const parsedSpendings = state.spendings.map((ele)=> parseFloat(ele.value) ).reduce((add, acc)=>{return add + acc},0)
 
-    const revenueValue = parsedIncomings + parsedSpendings
+    const revenueValue = (parsedIncomings + parsedSpendings).toFixed(2)
 
     
-    
-    return(<div className="revenueContainer">
-        <DisplayValue />
-    </div>)
+    return(<DisplayValue conditionalStyle={revenueValue} displayId={'Receita'}/>)
 }

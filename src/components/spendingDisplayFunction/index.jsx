@@ -1,5 +1,6 @@
 import React from 'react'
 import {useData} from '../../context/data_provider/index'
+import DisplayValue from '../displayValue/index'
 
 export default function SpendingDisplayFunction(){
 
@@ -14,12 +15,9 @@ export default function SpendingDisplayFunction(){
     }).reduce((acc, add)=>{
 
         return acc + add
-    },0)
+    },0).toFixed(2)
     
     return(
-        <div className="spendingContainer">
-            <p>Saídas</p>
-            <p>R${valueHandle.toFixed(2)}</p>
-        </div>
+            <DisplayValue valueToDisplay={valueHandle} displayId={'Saída'}/>
     )
 }

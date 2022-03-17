@@ -23,7 +23,12 @@ function Index (){
         <main>
             <DataProvider>
                 <div className ='headContainer'>
-                    <RevenueDisplayFunction/>
+                    <div className="displayersContainer">
+                        <IncomingDisplayFunction/>
+                        <SpendingDisplayFunction/>
+                        <RevenueDisplayFunction/>
+
+                    </div>
                         
                         
                 </div>
