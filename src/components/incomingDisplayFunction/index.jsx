@@ -1,5 +1,6 @@
 import React from 'react'
 import {useData} from '../../context/data_provider/index'
+import DisplayValue from '../displayValue/index'
 
 export default function IncomingDisplayFunction(){
 
@@ -15,10 +16,11 @@ export default function IncomingDisplayFunction(){
         return acc + add
     },0)
     
+    
+
     return(
         <div className="incomingContainer">
-            <p>Entradas</p>
-            <p>R${valueHandle.toFixed(2)}</p>
+            
         </div>
     )
 }

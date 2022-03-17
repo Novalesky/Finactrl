@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import ReactDOM from 'react-dom'
-import DisplayValue from './components/displayValue/index'
 import DataProvider from './context/data_provider/index'
 import IncomingDisplayFunction from './components/incomingDisplayFunction/index'
 import SpendingDisplayFunction from './components/spendingDisplayFunction/index'
@@ -24,24 +23,9 @@ function Index (){
         <main>
             <DataProvider>
                 <div className ='headContainer'>
+                    <RevenueDisplayFunction/>
                         
-                        <DisplayValue>
-                            <IncomingDisplayFunction>
-
-                            </IncomingDisplayFunction>
-                        </DisplayValue>
                         
-                        <DisplayValue>
-                            <SpendingDisplayFunction>
-
-                            </SpendingDisplayFunction>
-                        </DisplayValue>
-                        
-                        <DisplayValue>
-                            <RevenueDisplayFunction >
-
-                            </RevenueDisplayFunction>
-                        </DisplayValue>
                 </div>
                 <div className='transactionsContainer'>
                     {modalHandle}

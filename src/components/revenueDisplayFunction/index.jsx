@@ -1,5 +1,6 @@
 import React from 'react'
 import {useData} from '../../context/data_provider/index'
+import DisplayValue from '../displayValue/index'
 
 export default function RevenueDisplayFunction(){
     const {state} = useData()
@@ -7,12 +8,11 @@ export default function RevenueDisplayFunction(){
     const parsedIncomings = state.incomings.map((ele)=> parseFloat(ele.value) ).reduce((add, acc)=>{return add + acc},0)
     const parsedSpendings = state.spendings.map((ele)=> parseFloat(ele.value) ).reduce((add, acc)=>{return add + acc},0)
 
-    let revenueValue = parsedIncomings + parsedSpendings
+    const revenueValue = parsedIncomings + parsedSpendings
 
     
     
     return(<div className="revenueContainer">
-        <p>Receita</p>
-        <p>R${revenueValue.toFixed(2)}</p>
+        <DisplayValue />
     </div>)
 }
