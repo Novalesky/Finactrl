@@ -1,11 +1,25 @@
 import React from 'react'
-import InputDataDisplay from '../inputDataDisplay/index'
+import PositiveInputLogic from '../positiveInputLogic/index'
+import NegativeInputLogic from '../negativeInputLogic/index';
 import './index.css'
-export default function InputModal({viewSwitcher}){
-    const {setModalVisible} = viewSwitcher
+export default function InputModal({view,viewSwitcher}){
+    let inputToggle = false
+
+    switch (view) {
+        case 'positive':
+            inputToggle = <PositiveInputLogic/>
+            break;
+        
+        case 'negative':
+            inputToggle = <NegativeInputLogic/>
+            break;
+        default:
+            break;
+    }
+    
     
     function closeModal(){
-        setModalVisible(false)
+        viewSwitcher(false)
     }
     
     return(
@@ -14,7 +28,8 @@ export default function InputModal({viewSwitcher}){
         <div className='modalContainer'>
         
             <button onClick={closeModal} className="closeModal">X</button>
-            <InputDataDisplay/>
+            {inputToggle}
+        
         </div>
     </div>
 )}

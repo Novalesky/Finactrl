@@ -10,6 +10,7 @@
     
     background-color: whitesmoke;
     border-radius:5px;
+    box-shadow: 2px 2px 10px -5px black ;
     
     font-family:'Shippori Antique B1', sans-serif;
     font-size: larger;
@@ -19,6 +20,7 @@
 .defaultStyle:nth-child(2) svg{
     transform: rotate(180deg);
     stroke:rgb(199, 59, 59);
+    box-shadow:-2px -2px 10px -5px black;
 }
 .defaultStyle:nth-child(3){
     background-color: rgb(132, 241, 132);
@@ -29,10 +31,15 @@
 .negative svg{
     transform:rotate(180deg);
     stroke:rgb(199, 59, 59);
+    box-shadow: -2px -2px 10px -5px black ;
+
 }
 svg{
-    width:20px;
-    height:20px;
+    width:35px;
+    height:35px;
     transition: transform 1s;
     stroke:rgb(36, 153, 36);
+    border-radius:20px;
+    box-shadow:2px 2px 10px -5px black;
+    
 }

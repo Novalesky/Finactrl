@@ -1,12 +1,17 @@
 import React, {useState}from 'react'
 import {useData} from '../../context/data_provider/index'
 import './index.css'
-let idGeneretor = 0
-export default function InputDataDisplay(){
-    const {dispatch} = useData()
+
+export default function PositiveInputLogic(){
+    const {dispatch, id, setId} = useData()
     const [newEntry, setNewEntry] = useState({})
     
-    function handleChange({target}){
+    function handleValueChange({target}){
+        const {id, value} = target
+        setNewEntry({...newEntry, [id]:parseInt(value) })
+    }
+
+    function handleDescriptionChange({target}){
         const {id, value} = target
         setNewEntry({...newEntry, [id]:value })
     }
@@ -17,20 +22,20 @@ export default function InputDataDisplay(){
             window.alert('Todos os campos devem ser preenchidos')
             return
         }else{
-            setNewEntry(newEntry.id = ++idGeneretor)
-            newEntry.value <0 ?dispatch({type:'spending', newSpending: newEntry}) : dispatch({type:'incoming', newIncoming: newEntry})
+            setId(id+1)
+            setNewEntry(newEntry.id = id)
+            dispatch({type:'Add', payload: newEntry})
             setNewEntry('')
 
         }
         
     }
-    
     return (
         <div className="inputContainer">
             <div className="inputFieldHandler">
             
-            <input onChange={handleChange} type="number"  id='value' value = {newEntry.value || ''}></input>
-            <input onChange={handleChange} id='description' value = {newEntry.description || ''}></input>
+            <input onChange={handleValueChange} autoComplete='none' type="number"  id='value' value = {newEntry.value || ''}></input>
+            <input onChange={handleDescriptionChange} autoComplete='none' id='description' value = {newEntry.description || ''}></input>
             </div>
             
             <button onClick={handleClick}>Adicionar</button>
